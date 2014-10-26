@@ -328,7 +328,7 @@ class taxonomy_dropdown_widget_plugin {
 					break;
 
 					case 'orderby' :
-						if ( $value == 'name' || $value == 'count' ) {
+						if ( $value == 'name' || $value == 'count' || $value == 'id' ) {	
 							$options_sanitized[ $key ] = $value;
 						}
 					break;
@@ -403,7 +403,8 @@ class taxonomy_dropdown_widget extends WP_Widget {
 	 * @return null
 	 */
 	public function __construct() {
-		$this->WP_Widget( false, 'Taxonomy Dropdown Widget', array( 'description' => 'Displays selected non-hierarchical taxonomy terms in a dropdown list.' ) );
+		$this->WP_Widget( false, 'Taxonomy Dropdown Widget', 
+			array( 'description' => 'Displays selected non-hierarchical taxonomy terms in a dropdown list.', 'classname' => 'taxonomy_dropdown_widget' ) );
 
 		// Shortcut to the main plugin instance from within the widget class
 		$this->plugin = taxonomy_dropdown_widget_plugin::get_instance();
@@ -517,7 +518,10 @@ class taxonomy_dropdown_widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_name( 'order_name' ); ?>"><?php _e( 'Name' ); ?></label><br />
 
 			<input type="radio" name="<?php echo $this->get_field_name( 'orderby' ); ?>" value="count" id="<?php echo $this->get_field_name( 'order_count' ); ?>"<?php checked( $options['orderby'], 'count', true ); ?> />
-			<label for="<?php echo $this->get_field_name( 'order_count' ); ?>"><?php _e( 'Post count' ); ?></label>
+			<label for="<?php echo $this->get_field_name( 'order_count' ); ?>"><?php _e( 'Post count' ); ?></label><br />
+			
+			<input type="radio" name="<?php echo $this->get_field_name( 'orderby' ); ?>" value="id" id="<?php echo $this->get_field_name( 'order_count' ); ?>"<?php checked( $options['orderby'], 'id', true ); ?> />
+			<label for="<?php echo $this->get_field_name( 'order_count' ); ?>"><?php _e( 'ID' ); ?></label>	
 		</p>
 
 		<p>
