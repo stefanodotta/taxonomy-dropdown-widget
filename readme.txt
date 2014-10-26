@@ -3,8 +3,8 @@ Contributors: ethitter
 Donate link: https://ethitter.com/plugins/taxonomy-dropdown-widget/
 Tags: tag, tags, taxonomy, sidebar, widget, widgets, dropdown, drop down
 Requires at least: 2.8
-Tested up to: 3.8
-Stable tag: 2.1
+Tested up to: 4.0
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,6 +77,10 @@ This plugin relies on WordPress' `get_terms()` function (http://codex.wordpress.
 To make targeting a specific filter reference possible should you use multiple instances of the dropdown (multiple widgets, use of the `taxonomy_dropdown_widget()` function, or some combination thereof), the filter provides a second argument, `$id`, that is either the numeric ID of the widget's instance or the string provided as the second argument to `taxonomy_dropdown_widget()`.
 
 == Changelog ==
+
+= 2.2 =
+* Added order by ID
+* Added class to constructor
 
 = 2.1 =
 * Introduce filters on dropdown and its components for greater customizability.
