@@ -1,5 +1,5 @@
 === Taxonomy Dropdown Widget ===
-Contributors: ethitter
+Contributors: ethitter, stefanodotta
 Donate link: https://ethitter.com/plugins/taxonomy-dropdown-widget/
 Tags: tag, tags, taxonomy, sidebar, widget, widgets, dropdown, drop down
 Requires at least: 2.8
@@ -78,7 +78,7 @@ To make targeting a specific filter reference possible should you use multiple i
 
 == Changelog ==
 
-= 2.2 =
+= 2.2 (stefanodotta) =
 * Added order by ID
 * Added class to constructor
 
